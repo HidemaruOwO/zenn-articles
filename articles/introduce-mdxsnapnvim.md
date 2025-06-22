@@ -114,7 +114,7 @@ https://github.com/HidemaruOwO/mdxsnap.nvim
 
 `mdxsnap.nvim`は設定なしで動作しますが、ユーザーが任意の`CMS`向けの設定をする前提で設計したため使用体験はとても悪くやはり設定するべきです。
 
-- 設定項目のサンプル
+:::details 設定のサンプル
 
 ```lua
 require("mdxsnap").setup({
@@ -148,7 +148,9 @@ require("mdxsnap").setup({
 })
 ```
 
-まず、覚えておくべき設定項目は
+:::
+
+重要な設定として`customTextFormat`と`customImports`が挙げられます。これらが他のプラグインにはない`mdxsnap`の特徴と言えます。
 
 - `customTextFormat`: Markdownの`![]()`画像形式構文を任意の形式に置き換えます。
 
@@ -230,6 +232,8 @@ export function ImportImage(path: string) {
 
 :::
 
+最後に覚えておく設定は`ProjectOverrides`です。この機能について平たくいえばプロファイル機能で、プロジェクトに順応した`customImports`などの設定を行えます。
+
 - `ProjectOverrides`: プロジェクト単位で`customImports`や`customTextFormat`、`PastePath`などの変更を可能にします。
 
   - `matchType`: プロジェクトを上書きする際にプロジェクトを判定するロジックを選択します。`"projectName"`もしくは`"projectPath"`が代入可能です。
@@ -255,7 +259,7 @@ PastePathで指定したディレクトリの下に、以下の構造で画像�
   - `"relative"`: (推奨) 画像の保存先をプロジェクトルートからの相対パスに指定します。
   - `"absolute"`: 画像の保存先を絶対パスに指定します。
 
-これらが他のプラグインにはない`mdxsnap.nvim`の柔軟性に貢献している機能です。
+これらは`mdxsnap.nvim`の他の`CMS`などへの対応といった柔軟性に貢献している機能です。
 
 ### Zennでmdxsnapをつかう
 
@@ -266,10 +270,11 @@ PastePathで指定したディレクトリの下に、以下の構造で画像�
 ```lua
 {
     matchType = "projectName",
-    matchValue = "zenn-articles", -- Replace with your actual repository name
+    matchValue = "zenn-articles", -- この項目をあなたのリポジトリ名に置き換えてください。
+    -- :%s/zenn-articles/YOUR_REPO_NAME/g
     PastePath = "images",
     PastePathType = "relative",
-},
+}, -- ProjectOverrides に追加
 ```
 
 - Directory Structure
@@ -310,6 +315,8 @@ PastePathで指定したディレクトリの下に、以下の構造で画像�
 
 はじめて作った`Neovim`プラグインにしてもコードがとても汚いです。手っ取り早く作りたかったため`VibeCoding`をしましたが、ノウハウなどがないため`LLM`に対して満足にカウンセリングもできずご覧の次第です。これからじっくりコードリーディングを行って私主体で改修を進めたいと考えています。
 
-また、`mdxsnap`を使用していてバグ発見、もしくは「こんな機能が欲しいな」「こうしたらいいじゃないの」のようなな提案がございましたら`GitHub`の`issue`ページで気軽にご連絡ください。 記事をご覧いただきありがとうございました！
+また、`mdxsnap`を使用していてバグ発見、もしくは「こんな機能が欲しいな」「こうしたらいいじゃないの」のようなな提案がございましたら`GitHub`の`issue`ページで気軽にご連絡ください。 ここまで記事をご覧いただきありがとうございました！
 
-https://github.com/HidemaruOwO/mdxsnap.nvim/issues
+こちらのプラグインを気に入られましたら是非ともスターをお付けください ⭐️
+
+https://github.com/HidemaruOwO/mdxsnap.nvim
