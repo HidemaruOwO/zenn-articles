@@ -3,7 +3,8 @@ title: "マークダウン執筆で画像挿入が面倒だったのでNeovimプ
 emoji: "📚"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["vim", "neovim", "markdown", "mdx"]
-published: false
+published: true
+published_at: 2025-06-24 09:03
 ---
 
 [![not-by-ai](/images/introduce-mdxsnapnvim/not-by-ai.png)](https://notbyai.fyi/)
