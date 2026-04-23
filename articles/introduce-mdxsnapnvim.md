@@ -307,3 +307,13 @@ export function ImportImage(path: string) {
 こちらのプラグインを気に入られましたら是非ともスターをお付けください ⭐️
 
 https://github.com/HidemaruOwO/mdxsnap.nvim
+
+## 追記 4月23日
+
+ある日に`refactor/overall-1`ブランチでコードベースを全面的にリファクタリングしました。ただ、受験勉強でE2Eテストできる余裕がないので、もしお都合がよければ代わりにテストお願いします。以下の環境でどれか一つだけでも大丈夫なので基本的な機能の確認次第`owner@v-sli.me`にメールをお願いします。またREADMEなどで感謝をしたいのでGitHubのIDを教えていただけると助かります🙏🏻🙏🏻
+これらすべての動作確認次第masterブランチにマージします。
+
+- macos
+- wayland
+- x11
+- windows
